@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "Major Mono Display", monospace;
+  font-size: 30px;
+  color: white;
+
+  text-shadow: 10px 10px 20px black, 0 0 10em black, 0 0 0.2em black;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  resize: both;
+  overflow: auto;
+}
+
+#login-form {
+  margin: 50px;
+}
+
+#login-form input {
+  width: 400px;
+  height: 80px;
+  border: none;
+  font-family: "Major Mono Display", monospace;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #000000;
+  transition: ease-out 0.3s;
+  font-size: 1.4rem;
+  outline: none;
+  text-align: center;
+  margin: 5px;
+}
+
+#login-form input::placeholder {
+  color: rgb(0, 0, 0);
+  transition: ease-out 0.3s;
+  text-align: center;
+}
+
+#login-form input:hover::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+#login-form input:hover {
+  box-shadow: inset 500px 0 0 0 #000000;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+#clock {
+  text-align: center;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}
+
+#todo-form input {
+  width: 100vh;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+  font-family: "Major Mono Display", monospace;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#todo-form input::placeholder {
+  color: white;
+  font-family: "Major Mono Display", monospace;
+}
+
+#todo-form {
+  width: 100vh;
+  height: 50px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+  border: 3px solid #000000;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#todo-form:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#todo-form:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #000000;
+}
+
+#todo-form:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+#todoButton {
+  margin: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  transition: 0.2s;
+}
+
+#todoButton:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(241, 255, 192), 0 0 40px rgb(241, 255, 192),
+    0 0 80px rgb(241, 255, 192);
+  transition-delay: 0.1s;
+}
+
+#quote {
+  position: fixed;
+  bottom: -40px;
+  font-size: medium;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+
+#todo-list {
+  text-align: center;
+  width: 50vh;
+  height: 300px;
+  overflow: scroll;
+  border-top: thick double rgba(0, 0, 0, 0.6);
+  border-bottom: thick double rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0em -0.55em black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#todo-list::-webkit-scrollbar {
+  width: 0;
+}
+
+#weather {
+  text-align: right;
+  font-size: medium;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
